@@ -60,8 +60,6 @@ for epoch in range(epochs):
 
     d_loss, d_acc = np.add(d_hist_fake, d_hist_real) * 0.5
 
-
-
     if epoch % 2 == 0:
         z = np.random.normal(0, 1, (batch_size, noise))
         gan_hist = gan_model.train_on_batch(z, real)
